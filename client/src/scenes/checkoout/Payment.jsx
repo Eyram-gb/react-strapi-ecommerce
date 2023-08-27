@@ -1,10 +1,41 @@
-import React from 'react'
+import { Box, Typography } from "@mui/material";
+import TextField from "@mui/material/TextField";
 
-const Payment = () => {
+const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio consequuntur nobis, cumque quibusdam rem quam. Voluptatem eaque qui obcaecati perferendis ab ratione dignissimos fugiat quis assumenda molestiae quibusdam tempora, temporibus, saepe earum similique dolor necessitatibus! Sunt soluta asperiores illo dolorum quo omnis natus, consequuntur possimus laboriosam esse quas similique repellat, dolore inventore in perferendis aperiam at. Vel velit dignissimos quaerat rem, suscipit officiis possimus nesciunt neque ea ipsam nulla quisquam. Cum ex corrupti incidunt officia voluptatum consectetur iure porro deserunt enim deleniti modi odio, recusandae tempore, veniam a? Cum ipsum esse at pariatur nemo quam dolor rem beatae deserunt nostrum, natus maxime cupiditate mollitia reiciendis aliquid quas animi voluptatem enim doloremque ducimus id dolorum ipsam dolores. Possimus dicta inventore quae eius doloremque deserunt laborum quisquam corrupti aut modi itaque eum facilis ipsam, explicabo, quasi libero repellendus rem dolorum. Iusto dolorum et veritatis ea sapiente distinctio deserunt sint eligendi voluptatem at, repellat aperiam nesciunt quas a. Praesentium impedit fuga similique illo, distinctio delectus laudantium ipsum unde sunt. Quaerat placeat, quasi cum id officiis quia libero amet! Ex est laboriosam alias recusandae fuga tempora vitae ipsa quisquam eaque ipsum fugit repudiandae, aut optio earum dolores, placeat veniam. Dolorem amet velit rerum mollitia vitae hic nostrum iure voluptas, unde itaque. Natus expedita accusantium accusamus quam! Perspiciatis enim fuga ipsum voluptas. Illum similique magnam, iusto eaque eum dolore cum hic suscipit eos magni! Quod quos molestiae quam nulla hic inventore iusto facilis, laudantium quas velit sint impedit necessitatibus voluptas, cumque aperiam amet numquam, sed officia? Exercitationem delectus molestias, doloribus nisi sit iure facilis animi, doloremque numquam iste esse? Sunt doloremque repudiandae dolore eius quos fuga! Temporibus aut nulla totam! Nostrum, non aut suscipit, vitae atque molestiae expedita, alias ex odit nulla voluptas blanditiis! Quam illo possimus molestiae praesentium sequi fugiat laudantium asperiores aliquid voluptates.</div>
-  )
-}
+    <Box m="30px 0">
+      {/* CONTACT INFO */}
+      <Box>
+        <Typography sx={{ mb: "15px" }} fontSize="18px">
+          Contact Info
+        </Typography>
+        <TextField
+          fullWidth
+          type="text"
+          label="Email"
+          onBlur={handleBlur}
+          onChange={handleChange}
+          value={values.email}
+          name="email"
+          error={!!touched.email && !!errors.email}
+          helperText={touched.email && errors.email}
+          sx={{ gridColumn: "span 4", marginBottom: "15px" }}
+        />
+        <TextField
+          fullWidth
+          type="text"
+          label="Phone Number"
+          onBlur={handleBlur}
+          onChange={handleChange}
+          value={values.phoneNumber}
+          name="phoneNumber"
+          error={!!touched.phoneNumber && !!errors.phoneNumber}
+          helperText={touched.phoneNumber && errors.phoneNumber}
+          sx={{ gridColumn: "span 4" }}
+        />
+      </Box>
+    </Box>
+  );
+};
 
-export default Payment
+export default Payment;
