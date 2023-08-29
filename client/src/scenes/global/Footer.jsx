@@ -58,13 +58,10 @@ function Footer() {
           <Typography variant="h4" fontWeight="bold" mb="30px">
             Contact Us
           </Typography>
-          <Typography mb="30px">
-            50 north Whatever Blvd, Washington, DC 10501
-          </Typography>
           <Typography mb="30px" sx={{ wordWrap: "break-word" }}>
-            Email: mredwardroh@gmail.com
+            Email: eyramgb@gmail.com
           </Typography>
-          <Typography mb="30px">(222)333-4444</Typography>
+          <Typography mb="30px">(+233)244160546</Typography>
         </Box>
       </Box>
     </Box>
